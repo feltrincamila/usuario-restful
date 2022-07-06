@@ -16,7 +16,7 @@ public class Usuario {
     private String nome;
 
     @Size(max=80)
-    private String userneme;
+    private String username;
 
     @Size(max=50)
     private String senha;
@@ -36,10 +36,10 @@ public class Usuario {
     }
 
     public String getUserneme() {
-        return userneme;
+        return username;
     }
     public void setUserneme(String userneme) {
-        this.userneme = userneme;
+        this.username = userneme;
     }
 
     public String getSenha() {
@@ -52,7 +52,7 @@ public class Usuario {
         return "Usuario" +
                 "id=" + id +
                 " nome='" + nome +
-                " userneme='" + userneme +
+                " userneme='" + username +
                 " senha='" + senha;
     }
 }

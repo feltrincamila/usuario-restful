@@ -1,24 +1,29 @@
 package br.senai.service;
 
 import br.senai.model.Usuario;
+import br.senai.repository.UsuarioReposiotory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+import java.util.Optional;
+@Service
 public class UsuarioServiceImpl implements UsuarioService {
 
-    @Override
+@Autowired
+UsuarioReposiotory usuarioReposiotory;
+
+@Override
     public List<Usuario> findAll() {
-        return null;
-    }
+        return usuarioReposiotory.findAll();}
 
     @Override
-    public Usuario findById(Long id) {
-        return null;
-    }
+    public Optional<Usuario> findById(Long id) {
+        return usuarioReposiotory.findById(id);}
 
     @Override
     public Usuario create(Usuario usuario) {
-        return null;
+        return usuarioReposiotory.save(usuario);
     }
 
     @Override
